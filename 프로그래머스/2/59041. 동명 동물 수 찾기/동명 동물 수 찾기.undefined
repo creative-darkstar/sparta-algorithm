@@ -1,0 +1,6 @@
+select * from (
+    select NAME, count(NAME) as cnt from ANIMAL_INS
+    group by NAME
+) tmp
+where tmp.cnt > 1
+order by tmp.NAME
